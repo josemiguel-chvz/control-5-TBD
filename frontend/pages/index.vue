@@ -106,7 +106,7 @@ export default {
       }
     },
     new_institution: function() {
-      this.$router.push({path: 'new'});
+      this.$router.push({path: `/new`});
     },
     view_institution: function(event) {
       let institution_id = event;

@@ -121,7 +121,7 @@
             this.show_success_alert = true;
             await this.sleep(1500);
             let institution_id = response.data.id;
-            this.$router.push({path: `/index/${institution_id}`});
+            this.$router.push({path: `/index`});
           }
         }catch (error) {
           console.log("error", error)

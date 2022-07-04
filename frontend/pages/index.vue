@@ -99,18 +99,18 @@ export default {
   methods: {
     getData: async function() {
       try {
-        let response = await this.$axios.get("/api/institutions/all");
+        let response = await this.$axios.get('all');
         this.institutions = response.data;
       } catch (error) {
         console.log(error)
       }
     },
     new_institution: function() {
-      this.$router.push({path: `/institution/new`});
+      this.$router.push({path: 'new'});
     },
     view_institution: function(event) {
       let institution_id = event;
-      this.$router.push({path: `/institution/${institution_id}`});
+      this.$router.push({path: institution_id});
     },
     open_delete_modal: function(event) {
       this.show_delete_modal = true;
@@ -118,7 +118,7 @@ export default {
     },
     delete_institution: async function(institution_id) {
        try {
-        let response = await this.$axios.delete("/api/institutions/"+institution_id);
+        let response = await this.$axios.delete(institution_id);
         if (response.status == 204) {
          location.reload();
         }

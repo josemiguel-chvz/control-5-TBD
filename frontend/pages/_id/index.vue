@@ -7,7 +7,7 @@
           <b-card-text>
             <b-row>
               <b-col cols=2>
-                <b-img  style="width:250px;" src="https://userscontent2.emaze.com/images/9263837b-1949-4bd7-8271-c0e49f68c4ed/11ce17d9d200fc1b86a808e93f1f411d.jpg" fluid thumbnail></b-img>   
+                <b-img  style="width:250px;" src="https://userscontent2.emaze.com/images/9263837b-1949-4bd7-8271-c0e49f68c4ed/11ce17d9d200fc1b86a808e93f1f411d.jpg" fluid thumbnail></b-img>
               </b-col>
               <b-col cols=6>
                 <p>
@@ -49,7 +49,7 @@
 export default {
   data () {
     return{
-	  show_delete_modal: false,
+      show_delete_modal: false,
       institution: {}
     }
   },
@@ -59,18 +59,18 @@ export default {
   methods: {
     getData: async function() {
       try {
-		let institution_id = this.$route.params.id;
-        let response = await this.$axios.get("/api/institutions/"+institution_id);
+        let institution_id = this.$route.params.id;
+        let response = await this.$axios.get("/institutions/"+institution_id);
         this.institution = response.data;
       } catch (error) {
         console.log(error)
       }
     },
-	  edit_institution: function(event) {
+    edit_institution: function(event) {
       let institution_id = event;
       this.$router.push({path: institution_id+"/edit"});
     }
-  } 
+  }
 }
 </script>
 

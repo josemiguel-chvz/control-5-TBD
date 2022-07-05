@@ -112,7 +112,7 @@
       getData: async function() {
         try {
 		      let institution_id = this.$route.params.id;
-          let response = await this.$axios.get("/api/institutions/"+institution_id);
+          let response = await this.$axios.get("/institutions/"+institution_id);
           this.institution = response.data;
         } catch (error) {
           console.log(error)
@@ -121,7 +121,7 @@
       update:async function(){
         try {
           let institution_id = this.$route.params.id
-          let response = await this.$axios.put("/api/institutions/"+institution_id, this.institution);
+          let response = await this.$axios.put("/institutions/"+institution_id, this.institution);
           if (response.status == 200) {
             this.show_error_alert = false;
             this.show_success_alert = true;
@@ -131,7 +131,7 @@
           }
         }catch (error) {
           console.log("error", error)
-        }         
+        }
       },
     }
 }

@@ -24,6 +24,12 @@
                 <b-button size="sm"  variant="primary" @click="edit_institution(institution.id)">Editar</b-button>
               </b-col>
             </b-row>
+            <b-row>
+              <b-col>
+                <br>
+                <b-button size="lg"  variant="primary" @click="volver()">Volver</b-button>
+              </b-col>
+            </b-row>
           </b-card-text>
         </b-card>
       </b-col>
@@ -69,6 +75,9 @@ export default {
     edit_institution: function(event) {
       let institution_id = event;
       this.$router.push({path: institution_id+"/edit"});
+    }, 
+    volver(){
+      this.$router.push({path: "/"});
     }
   }
 }

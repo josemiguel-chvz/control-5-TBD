@@ -50,6 +50,9 @@
                       <b-button type="button" size="md" @click="create" variant="outline-success">
                         Registrar
                       </b-button>
+                      <b-button type="button" size="md" @click="volver()" variant="outline-secondary">
+                        Volver
+                      </b-button>
                     </b-col>
                     <b-col cols="12" class="mt-1">
                       <b-alert show variant="success" fade v-model="show_success_alert">Institución creada correctamente</b-alert>
@@ -125,6 +128,9 @@
         }catch (error) {
           console.log("error", error)
         }
+      },
+      volver(){
+        this.$router.push({path: "/"});
       },
     }
 }

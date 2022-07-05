@@ -47,6 +47,9 @@
                       <b-button type="button" size="md" @click="update" variant="outline-success">
                         Actualizar
                       </b-button>
+                      <b-button type="button" size="md" @click="volver(institution.id)" variant="outline-secondary">
+                        Volver
+                      </b-button>
                     </b-col>
                     <b-col cols="12" class="mt-1">
                       <b-alert show variant="success" fade v-model="show_success_alert">Institución actualizada correctamente</b-alert>
@@ -133,6 +136,10 @@
           console.log("error", error)
         }
       },
+      volver(event){
+        let institution_id = event;
+        this.$router.push({path: `/${institution_id}`});
+      }
     }
 }
 </script>

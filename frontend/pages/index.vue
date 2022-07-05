@@ -99,7 +99,7 @@ export default {
   methods: {
     getData: async function() {
       try {
-        let response = await this.$axios.get('institutions/all');
+        let response = await this.$axios.get('/institutions/all');
         this.institutions = response.data;
       } catch (error) {
         console.log(error)
@@ -117,10 +117,10 @@ export default {
       this.selected_institution = event;
     },
     delete_institution: async function(institution_id) {
-       try {
-        let response = await this.$axios.delete(institution_id);
+      try {
+        let response = await this.$axios.delete('/institutions/'+institution_id);
         if (response.status == 204) {
-         location.reload();
+          location.reload();
         }
       } catch (error) {
         console.log(error)

@@ -111,7 +111,7 @@
       },
       getData: async function() {
         try {
-		      let institution_id = this.$route.params.id;
+          let institution_id = this.$route.params.id;
           let response = await this.$axios.get("/institutions/"+institution_id);
           this.institution = response.data;
         } catch (error) {
@@ -127,7 +127,7 @@
             this.show_success_alert = true;
             await this.sleep(1500);
             let institution_id = response.data.id;
-            this.$router.push({path: `/institution/${institution_id}`});
+            this.$router.push({path: `/${institution_id}`});
           }
         }catch (error) {
           console.log("error", error)

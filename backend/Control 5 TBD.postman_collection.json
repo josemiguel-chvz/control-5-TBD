@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "64a854e1-ca6a-4d9a-a55d-7b8db3ab5bc6",
+		"name": "Control 5 TBD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16000868"
+	},
+	"item": [
+		{
+			"name": "New Institution",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cruz Blanca\",\n    \"email\": \"contacto@cruzblanca.cl\",\n    \"contact\": \"+56940423359\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/institutions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"institutions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Institutions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/institutions/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"institutions",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Institution",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/institutions/62c37fbed78afe402d2d1a9c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"institutions",
+						"62c37fbed78afe402d2d1a9c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Institution",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cruz Blancasss\",\n    \"email\": \"contacto@cruzblanca.cl\",\n    \"contact\": \"+56940423359\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/institutions/62c37fbed78afe402d2d1a9c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"institutions",
+						"62c37fbed78afe402d2d1a9c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Institution Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cruz Blancasss\",\n    \"email\": \"contacto@cruzblanca.cl\",\n    \"contact\": \"+56940423359\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/institutions/62c37fbed78afe402d2d1a9c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"institutions",
+						"62c37fbed78afe402d2d1a9c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

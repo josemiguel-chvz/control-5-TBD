@@ -31,7 +31,7 @@
                       <b-form-input id="email" type="email" v-model="new_institution.email" :state="state2" trim></b-form-input>
                     </b-form-group>
                   </b-col>
-                   <b-col>
+                  <b-col>
                     <b-form-group
                       id="contacto"
                       description="Numero de contacto"
@@ -115,17 +115,16 @@
       },
       create:async function(){
         try {
-          let response = await this.$axios.post("/api/institutions/",this.new_institution);
+          let response = await this.$axios.post("/institutions",this.new_institution);
           if (response.status == 201) {
             this.show_error_alert = false;
             this.show_success_alert = true;
             await this.sleep(1500);
-            let institution_id = response.data.id;
-            this.$router.push({path: `/index`});
+            this.$router.push({path: `/`});
           }
         }catch (error) {
           console.log("error", error)
-        }         
+        }
       },
     }
 }

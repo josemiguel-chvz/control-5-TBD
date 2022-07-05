@@ -99,7 +99,7 @@ export default {
   methods: {
     getData: async function() {
       try {
-        let response = await this.$axios.get('all');
+        let response = await this.$axios.get('institutions/all');
         this.institutions = response.data;
       } catch (error) {
         console.log(error)
